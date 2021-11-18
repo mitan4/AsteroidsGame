@@ -4,6 +4,7 @@ Star[] sue = new Star[350];
 public void setup() 
 {
   size(600,600);
+  textAlign(TOP, LEFT);
   for(int i = 0; i < sue.length; i++)
     sue[i] = new Star();
 }
@@ -16,6 +17,11 @@ public void draw()
     sue[i].show();
     sue[i].randomize();
   }
+  text("Press 'a' to rotate left.", 20, 30);
+  text("Press 'd' to rotate right.", 20, 50);
+  text("Press 'f' to use hyperspace.", 20, 70);
+  text("Press 'w' to accelerate.", 20, 90);
+  text("Press 's' to deccelerate.", 20, 110);
 }
 public void keyPressed(){
   if(key == 'a'){ //rotate left
